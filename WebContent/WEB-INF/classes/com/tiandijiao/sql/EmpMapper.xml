@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tiandijiao.dao.EmpDao">
+	<!-- 查询全部的员工 -->
+	<select id="findAll" resultType="com.tiandijiao.entity.Emp">
+		select *
+		from t_emp
+	</select>
+
+	
+	<!-- if -->
+	<!-- 查询部门下的所有员工 -->
+	<select id="findByDept"
+			parameterType="com.tiandijiao.entity.Condition"
+			resultType="com.tiandijiao.entity.Emp">
+		select * from t_emp
+		<if test="deptno != null">
+			where deptno = #{deptno}
+		</if>
+	</select>
+	
+	<!-- choose -->
+	<!-- 查询大于当前收入的员工 -->
+	<select id="findBySalary"
+		parameterType="com.tiandijiao.entity.Condition"
+		resultType="com.tiandijiao.entity.Emp">
+		select * from t_emp
+		<choose>
+			<when test="salary > 3000">
+				where sal>#{salary}
+			</when>
+			<otherwise>
+				where sal >= 3000
+			</otherwise>
+		</choose>
+	
+	</select>
+	
+	<select id="select"
+			parameterType="com.tiandijiao.model.comm.NewsArticle"
+			resultType="com.tiandijiao.model.comm.NewsArticle">
+		select *
+		from news_article		
+	</select>
+	
+	<select id="selectById"
+			parameterType="com.tiandijiao.model.comm.NewsArticle"
+			resultType="com.tiandijiao.model.comm.NewsArticle">
+		select *
+		from news_article
+		where id=#{id}	
+	</select>
+	
+</mapper>
