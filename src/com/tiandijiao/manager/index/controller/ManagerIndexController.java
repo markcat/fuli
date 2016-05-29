@@ -12,6 +12,6 @@ public class ManagerIndexController {
 
 	@RequestMapping(value={"", "/"})
 	public String index(){
-		return "/manager/index";
+		return "/manager/kernel/index";
 	}
 }
