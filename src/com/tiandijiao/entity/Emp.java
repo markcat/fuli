@@ -3,7 +3,7 @@ package com.tiandijiao.entity;
 import java.util.Date;
 
 /**
- * Ô±¹¤±íµÄÊµÌåÀà
+ * å‘˜å·¥è¡¨çš„å®ä½“ç±»
  * @author markcat
  *
  */

@@ -13,8 +13,8 @@ import com.tiandijiao.entity.Emp;
 import com.tiandijiao.model.comm.NewsArticle;
 
 @Controller
-@RequestMapping("/newsarticle")
-public class NewsArticleController {
+@RequestMapping(value={"/mobilearticle", "mobile"})
+public class MobileArticleController {
 	
 	@Resource
 	private NewsArticleDao newsArticleDao;
@@ -22,19 +22,19 @@ public class NewsArticleController {
 	@Resource
 	private EmpDao empDao;
 	
-	@RequestMapping("/findEmp.do")
+	@RequestMapping("/findEmp")
 	public String find(Model model) {
 		List<Emp> list = empDao.findAll();
 		model.addAttribute("emps", list);
-		return "emp/emp_list";
+		return "/emp/emp_list";
 	}
 	
-	@RequestMapping("/list.do")
+	@RequestMapping(value={"/list", ""})
 	public String list(Model model, NewsArticle newsArticle){
 		List<NewsArticle> resultList = empDao.select(newsArticle);
 		model.addAttribute("newsArticles", resultList);
 		model.addAttribute("className", "资讯列表");
-		return "/news/news_article_list";
+		return "/mobile/news_article_list";
 	}
 	
 	@RequestMapping("/view")
@@ -42,6 +42,6 @@ public class NewsArticleController {
 		NewsArticle result = empDao.selectById(newsArticle);
 		model.addAttribute("newsArticle", result);
 		model.addAttribute("className", "资讯正文");
-		return "/news/news_article_detail";
+		return "/mobile/news_article_detail";
 	}
 }

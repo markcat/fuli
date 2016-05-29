@@ -2,7 +2,7 @@ package com.tiandijiao.annotation;
 
 
 /**
- * MyBatisʹ�ø�ע���ʶ  DAO
+ * MyBatis使用该注解标识  DAO
  * @author markcat
  *
  */

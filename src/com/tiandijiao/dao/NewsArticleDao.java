@@ -7,7 +7,7 @@ import com.tiandijiao.entity.Emp;
 import com.tiandijiao.model.comm.NewsArticle;
 
 /**
- * 员工表的 DAO 组件
+ * 鍛樺伐琛ㄧ殑 DAO 缁勪欢
  * @author markcat
  *
  */

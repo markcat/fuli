@@ -9,6 +9,6 @@
             <div class="header_top_logo">
                 <a class="ui-link">${empty className ? "资讯" : className}</a>
             </div>
-            <a title="首页" href="<%= this.getServletContext().getContextPath() %>/newsarticle/list.do"><div class="home"><i></i></div></a>
+            <a title="首页" href="<%= this.getServletContext().getContextPath() %>/mobile/list"><div class="home"><i></i></div></a>
         </div>
     </div>

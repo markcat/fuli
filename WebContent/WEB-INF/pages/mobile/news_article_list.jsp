@@ -120,7 +120,7 @@
 <script type="text/javascript">
 function viewById(id){
 	var contextPath = $("#contextPath").val();
-	location.href= contextPath + "/newsarticle/view.do?id=" + id;
+	location.href= contextPath + "/mobile/view?id=" + id;
 }
 </script>
 </html>

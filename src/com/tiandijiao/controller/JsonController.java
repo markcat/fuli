@@ -29,7 +29,7 @@ public class JsonController {
 	public Map<String, Object> f2 () {
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("id", 1001);
-		data.put("name", "Áõ±¸");
+		data.put("name", "åˆ˜å¤‡");
 		return data;
 	}
 	
@@ -50,7 +50,7 @@ public class JsonController {
 		
 		e.setEmpno(1);
 		
-		e.setEname("Áõ²ÔËÉ");
+		e.setEname("åˆ˜è‹æ¾");
 		
 		e.setMgr(1);
 		
@@ -66,7 +66,7 @@ public class JsonController {
 		List<Emp> list = new ArrayList<Emp>();
 		Emp e1 = new Emp();
 		e1.setEmpno(1);
-		e1.setEname("Ä³ÈË");
+		e1.setEname("æŸäºº");
 		return list;
 	}
 }
