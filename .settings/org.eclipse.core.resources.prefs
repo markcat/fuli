@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/pages/manager/kernel/manager_article_list.jsp=UTF-8
+encoding//WebContent/WEB-INF/pages/manager/manager_header.jsp=UTF-8
+encoding//WebContent/WEB-INF/pages/manager/manager_js_list.jsp=UTF-8
+encoding//WebContent/WEB-INF/pages/manager/manager_sidebar.jsp=UTF-8
+encoding//src/com/tiandijiao/test/TestEmpDao.java=UTF-8
 encoding/<project>=UTF-8

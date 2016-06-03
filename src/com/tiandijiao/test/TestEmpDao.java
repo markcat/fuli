@@ -9,74 +9,87 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.tiandijiao.dao.EmpDao;
 import com.tiandijiao.entity.Condition;
 import com.tiandijiao.entity.Emp;
+import com.tiandijiao.model.comm.NewsArticle;
 
 /**
- * EmpDao  ²âÊÔÀà
+ * EmpDao  æµ‹è¯•ç±»
  * @author markcat
  *
  */
 public class TestEmpDao {
 	/**
-	 * ²âÊÔ²éÑ¯È«²¿Ô±¹¤
+	 * æµ‹è¯•æŸ¥è¯¢å…¨éƒ¨å‘˜å·¥
 	 */
-	/*
-	@Test
-	public void testFindAll () {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		EmpDao dao = ctx.getBean(EmpDao.class);
-		List<Emp> list = dao.findAll();
-		for(Emp e:list){
-			System.out.println("²âÊÔ²éÑ¯È«²¿Ô±¹¤");
-			System.out.println(
-					e.getEmpno() + " " +
-					e.getEname() + " " +
-					e.getJob()
-			);
-		}
-	}
-	*/
+	
+//	public void testFindAll () {
+//		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		EmpDao dao = ctx.getBean(EmpDao.class);
+//		List<Emp> list = dao.findAll();
+//		for(Emp e:list){
+//			System.out.println("æµ‹è¯•æŸ¥è¯¢å…¨éƒ¨å‘˜å·¥");
+//			System.out.println(
+//					e.getEmpno() + " " +
+//					e.getEname() + " " +
+//					e.getJob()
+//			);
+//		}
+//	}
+	
 	
 	
 	/**
-	 * ¸ù¾İ²¿ÃÅ²éÑ¯Ô±¹¤
+	 * æ ¹æ®éƒ¨é—¨æŸ¥è¯¢å‘˜å·¥
 	 */
-	
-	@Test
-	public void testFindByDept () {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		EmpDao dao = ctx.getBean(EmpDao.class);
-		
-		Condition cond = new Condition();
-		cond.setDeptno(10);
-		List<Emp> list = dao.findByDept(cond);
-		for(Emp e:list){
-			System.out.println("¸ù¾İ²¿ÃÅ²éÑ¯Ô±¹¤");
-			System.out.println(
-					e.getEmpno() + " " +
-					e.getEname() + " " +
-					e.getJob()
-			);
-		}
-	}
+//	public void testFindByDept () {
+//		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		EmpDao dao = ctx.getBean(EmpDao.class);
+//		
+//		Condition cond = new Condition();
+//		cond.setDeptno(10);
+//		List<Emp> list = dao.findByDept(cond);
+//		for(Emp e:list){
+//			System.out.println("æ ¹æ®éƒ¨é—¨æŸ¥è¯¢å‘˜å·¥");
+//			System.out.println(
+//					e.getEmpno() + " " +
+//					e.getEname() + " " +
+//					e.getJob()
+//			);
+//		}
+//	}
 	/**
-	 * ²éÑ¯´óÓÚµ±Ç°ÊÕÈëµÄÔ±¹¤
+	 * æŸ¥è¯¢å¤§äºå½“å‰æ”¶å…¥çš„å‘˜å·¥
 	 */
-	
-	@Test
-	public void testFindBySalary () {
+//	public void testFindBySalary () {
+//		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		EmpDao dao = ctx.getBean(EmpDao.class);
+//		
+//		Condition cond = new Condition();
+//		cond.setSalary(4000.0);
+//		List<Emp> list = dao.findBySalary(cond);
+//		for(Emp e : list){
+//			System.out.println("æŸ¥è¯¢å¤§äºå½“å‰æ”¶å…¥çš„å‘˜å·¥");
+//			System.out.println(
+//				e.getEmpno() + " " +
+//				e.getEname() + " " +
+//				e.getJob()
+//			);
+//		}
+//	}
+
+	/*@Test
+	public void testFindByNewsList () {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		EmpDao dao = ctx.getBean(EmpDao.class);
+		NewsArticleDao dao = ctx.getBean(NewsArticleDao.class);
 		
-		Condition cond = new Condition();
-		cond.setSalary(4000.0);
-		List<Emp> list = dao.findBySalary(cond);
-		for(Emp e : list){
-			System.out.println("²éÑ¯´óÓÚµ±Ç°ÊÕÈëµÄÔ±¹¤");
+		NewsArticle newsArticle = new NewsArticle();
+		List<NewsArticle> list = dao.select(newsArticle);
+		for(NewsArticle e : list){
+			System.out.println("æŸ¥è¯¢å¤§äºå½“å‰æ”¶å…¥çš„å‘˜å·¥");
 			System.out.println(
-				e.getEmpno() + " " +
-				e.getEname() + " " +
-				e.getJob()
+				e.getId() + " " +
+				e.getTitle() + " " +
+				e.getContent()
 			);
 		}
-	}
+	}*/
 }

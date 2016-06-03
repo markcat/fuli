@@ -1,9 +1,10 @@
 package com.tiandijiao.dao;
-
 import java.util.List;
 
-import com.tiandijiao.annotation.MyBatisRepository;
-import com.tiandijiao.entity.Emp;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.tiandijiao.model.comm.NewsArticle;
 
 /**
@@ -11,10 +12,16 @@ import com.tiandijiao.model.comm.NewsArticle;
  * @author markcat
  *
  */
-@MyBatisRepository
 public interface NewsArticleDao {
-	List<Emp> findAll();
+
+//	@Autowired(required = true)
+//	protected SqlSession sqlSessionTemplate;
 	
-	//List<NewsArticle> select(NewsArticle newsArticle);
+	
+	
+//	public List<NewsArticle> select(NewsArticle query){
+//
+//		return sqlSessionTemplate.selectList(("queryArticles"),query);
+//	}
 	
 }

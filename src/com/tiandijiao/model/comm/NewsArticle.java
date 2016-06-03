@@ -4,14 +4,16 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.tiandijiao.common.dao.domain.Identifiable;
+import com.tiandijiao.model.BaseModel;
+
 
 /**
  * 新闻 实体类
  * @author markcat
  *
  */
-public class NewsArticle {
-
+public class NewsArticle extends BaseModel implements Identifiable {
 	//
 	private String id;
 	//
@@ -37,9 +39,6 @@ public class NewsArticle {
 	private String userId;
 	//
 	private int readTimes;
-	
-	
-	
 	public String getId() {
 		return id;
 	}
@@ -112,5 +111,6 @@ public class NewsArticle {
 	public void setReadTimes(int readTimes) {
 		this.readTimes = readTimes;
 	}
+	
 	
 }

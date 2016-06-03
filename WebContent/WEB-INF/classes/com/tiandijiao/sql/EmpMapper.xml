@@ -36,19 +36,32 @@
 	
 	</select>
 	
+	
 	<select id="select"
-			parameterType="com.tiandijiao.model.comm.NewsArticle"
-			resultType="com.tiandijiao.model.comm.NewsArticle">
+			parameterType="com.tiandijiao.model.comm.query.NewsArticleQuery"
+			resultType="com.tiandijiao.model.comm.vo.NewsArticleVo">
+			
 		select *
 		from news_article		
 	</select>
 	
 	<select id="selectById"
-			parameterType="com.tiandijiao.model.comm.NewsArticle"
-			resultType="com.tiandijiao.model.comm.NewsArticle">
+			parameterType="com.tiandijiao.model.comm.query.NewsArticleQuery"
+			resultType="com.tiandijiao.model.comm.vo.NewsArticleVo">
 		select *
 		from news_article
 		where id=#{id}	
 	</select>
+	
+	<insert id="insert" parameterType="com.tiandijiao.model.comm.NewsArticle">
+		insert into news_article
+			(
+			id
+			)
+		values
+			(
+			#{id}
+			)
+	</insert>
 	
 </mapper>

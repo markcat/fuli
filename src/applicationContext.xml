@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 	<!-- 配置数据源 -->
-	<util:properties id="db" location="classpath:db.properties">
+	<util:properties id="db" location="classpath:jdbc.properties">
 	</util:properties>
 	
 	
@@ -40,9 +40,7 @@
 	
 	<!-- 配置MyBatis 注解  -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- <property name="basePackage" value="com/tiandijiao/mobile/dao">
-		</property> -->
-		<property name="basePackage" value="com.tiandijiao.dao">
+		<property name="basePackage" value="com.tiandijiao">
 		</property>
 		<!-- 注入sqlsessionfactory -->
 	</bean>

@@ -46,7 +46,7 @@
 <div class="ui-body-c" data-role="page" id="page_list">
 
 	<!-- head begin -->
-	<%@ include file="header.jsp" %>
+	<%@ include file="mobile_header.jsp" %>
 	<!-- head end -->
     
     <div data-role="content">
@@ -103,7 +103,7 @@
 	<!-- /content-->
 	
 	<!-- footer begin -->
-	<%@ include file="footer.jsp" %>
+	<%@ include file="mobile_footer.jsp" %>
 	<!-- footer end -->
 </div>
 

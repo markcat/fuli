@@ -45,7 +45,7 @@
 <div class="ui-body-c" data-role="page" id="page_view">
 
 	<!-- head begin -->
-	<%@ include file="header.jsp" %>
+	<%@ include file="mobile_header.jsp" %>
 	<!-- head end -->
 	
     <div data-role="content">
@@ -103,7 +103,7 @@ var cpro_id="u961311";
 <script type="text/javascript">setTimeout(function(){var url="http://m.cnbeta.com/mobile/m/v?id=505535&from=m";var g=document.createElement("script");g.async=1;g.src=url;document.body.insertBefore(g,document.body.firstChild);}, 2000);</script>
 </div><!-- /content-->
    	<!-- footer begin -->
-	<%@ include file="footer.jsp" %>
+	<%@ include file="mobile_footer.jsp" %>
 	<!-- footer end -->
 </div>
 <script charset="utf-8" type="text/javascript">
