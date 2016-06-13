@@ -56,11 +56,14 @@
 	<insert id="insert" parameterType="com.tiandijiao.model.comm.NewsArticle">
 		insert into news_article
 			(
-			id
+			id,
+			class_id
 			)
 		values
 			(
-			#{id}
+			#{id},
+			#{classId}
+			
 			)
 	</insert>
 	

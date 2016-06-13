@@ -1,2 +1,4 @@
+/applicationContext.xml
 /com/
 /jdbc.properties
+/spring-mybatis.xml

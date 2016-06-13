@@ -16,10 +16,10 @@
 	</util:properties>
 	
 	
-	<bean id="dbcp" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="username" value="#{db.user}">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="username" value="#{db.username}">
 		</property>
-		<property name="password" value="#{db.pwd}">
+		<property name="password" value="#{db.password}">
 		</property>
 		<property name="driverClassName" value="#{db.driver}">
 		</property>
@@ -29,11 +29,12 @@
 	
 	<!-- 配置sqlsessionfactory -->
 	<bean id="sqlsessionfactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dbcp">
+		<property name="dataSource" ref="dataSource">
 		</property>
 		<!-- <property name="mapperLocations" value="classpath:com/tiandijiao/model/comm/mapper/*.xml">
 		</property> -->
-		<property name="mapperLocations" value="classpath:com/tiandijiao/sql/*.xml">		
+		<property name="mapperLocations" value="classpath:com/tiandijiao/sql/*.xml">
+		<!-- <property name="typeAliasesPackage" value="com.tiandijiao" /> 	 -->	
 		</property>
 	</bean>
 		

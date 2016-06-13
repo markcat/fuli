@@ -112,5 +112,15 @@ public class NewsArticle extends BaseModel implements Identifiable {
 		this.readTimes = readTimes;
 	}
 	
+	public String toString(){
+		return ""
+		+ "; id=" + this.id
+		+ "; classId=" + this.classId
+		+ "; title=" + this.title
+		+ "; content =" + this.content
+		+ "";
+	}
+	
+	
 	
 }
